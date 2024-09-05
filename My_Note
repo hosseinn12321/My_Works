@@ -1,0 +1,6 @@
+HI
+
+<body class="<?php body_class(); ?>"
+<?php wp_head(); ?>
+
+
