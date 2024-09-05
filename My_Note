@@ -4,3 +4,7 @@ HI
 <?php wp_head(); ?>
 <?php wp_footer(); ?>
 
+*>template tags and conditional template
+*> hoocks: Hooks allow developers to change or extend WordPress’ functionality without needing to edit the WordPress core code itself. They do this by running actions and filters, which are PHP functions that perform tasks and make changes to data.
+
+Link = https://developer.wordpress.org/plugins/hooks/
