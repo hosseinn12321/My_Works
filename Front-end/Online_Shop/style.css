@@ -40,20 +40,16 @@
 
   .nav-menu {
     background-color: yellow;
-    width: 70%;
-    float: right;
+    width: 100%;
   }
 
   .nav-menu a {
     color: black;
-    padding: 2rem;
-    display: inline;
+    padding: 0.5rem;
+    display: block;
+    text-align: center;
   }
-  .main-bar-button {
-    width: 30%;
-    background-color: aqua;
-    
-  }
+  
   .item {
     display: inline-block;
     text-align: right;
@@ -66,20 +62,19 @@
 
   .head-title {
     background-color: greenyellow;
-    float: right;
-    width: 20%;
+    float: left;
+    width: 90%;
     text-align: center;
-    color: hotpink;
+    color: hotpink; 
     max-height: 50%;
   }
 
   .head-search {
-    background-color:teal;
-    float: right;
-    width: 70%;
-    text-align: center;
-    color: hotpink;
-    max-height: 50%;
+    display: none;
+  }
+  
+  .main-bar-button {
+    display: none; 
   }
 
   header h1 {
