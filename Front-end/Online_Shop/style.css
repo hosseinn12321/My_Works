@@ -41,15 +41,18 @@
   .nav-menu {
     background-color: yellow;
     width: 70%;
+    float: right;
   }
 
   .nav-menu a {
     color: black;
     padding: 2rem;
+    display: inline;
   }
   .main-bar-button {
-    width: 25%;
+    width: 30%;
     background-color: aqua;
+    
   }
   .item {
     display: inline-block;
@@ -64,14 +67,101 @@
   .head-title {
     background-color: greenyellow;
     float: right;
-    width: 40%;
+    width: 20%;
     text-align: center;
     color: hotpink;
     max-height: 50%;
   }
 
-  .head-title h1 {
+  .head-search {
+    background-color:teal;
+    float: right;
+    width: 70%;
+    text-align: center;
+    color: hotpink;
+    max-height: 50%;
+  }
+
+  header h1 {
     display: inline;
     font-size: 2vw;
     
+  }
+
+  /* For Responsive*/
+
+  @media only screen and (min-width: 700px) {
+    /*Header*/
+    header {
+        min-height: 5vw;
+        background-color: red;
+        
+      }
+    
+      header, .top-bar, .main-bar {
+        max-width: 100%;
+        background-color: red;
+      }
+    
+      .top-bar {
+        background-color: blue;
+        color: aliceblue;
+        font-size: 2.5rem;
+      }
+    
+      .main-bar {
+        background-color: purple;
+        text-align: right;
+      }
+    
+      .nav-menu {
+        background-color: yellow;
+        width: 70%;
+        float: right;
+      }
+    
+      .nav-menu a {
+        color: black;
+        padding: 2rem;
+        display: inline;
+      }
+      .main-bar-button {
+        width: 30%;
+        background-color: aqua;
+        
+      }
+      .item {
+        display: inline-block;
+        text-align: right;
+      }
+    
+      .logo {
+        background-color: violet;
+        width: 10%;
+      }
+    
+      .head-title {
+        background-color: greenyellow;
+        float: right;
+        width: 20%;
+        text-align: center;
+        color: hotpink;
+        max-height: 50%;
+      }
+    
+      .head-search {
+        background-color:teal;
+        float: right;
+        width: 70%;
+        text-align: center;
+        color: hotpink;
+        max-height: 50%;
+      }
+    
+      header h1 {
+        display: inline;
+        font-size: 2vw;
+        
+      }
+    /*Header*/
   }
