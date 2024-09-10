@@ -8,6 +8,8 @@
     <meta name="keywords" content="">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/
+    font-awesome/4.7.0/css/font-awesome.min.css"> <!-- for icon of navigation mobile menu -->
     <link rel="stylesheet" href="style.css">
 
     <title>آنلاین شاپ</title>
@@ -35,19 +37,22 @@
         </div>
         <div class="main-bar">
 
-            <div class="nav-menu item">
+            <div class="nav-menu item" id="myTopnav">
                 <nav>
                     <a href="#">صفحه اصلی</a>
                     <a href="#">فروشگاه</a>
                     <a href="#">درباره ما</a>
                     <a href="#">تماس با ما</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <span>مشاهده منو</span> 
+                    </a>
                 </nav>
             </div>
             <div class="main-bar-button item">
-               دکمه
+                دکمه
             </div>
         </div>
-        
+
     </header>
 
     <details>
@@ -55,6 +60,17 @@
         <p>چرم طبیعی دارای کیفیتی بسیار بالاتر از چرم مصنوعی میباشد</p>
     </details>
 
+    <script>
+        function myFunction() {
+            console.log("hi");
+            var x = document.getElementById("myTopnav");
+            if (x.className === "nav-menu item") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav-menu item";
+            }
+        }
+    </script>
 </body>
 
 </html>
