@@ -1,0 +1,36 @@
+++
+A semantic element clearly describes its meaning to both the browser and the developer.
+
+***The <section> element defines a section in a document.
+
+A web page could normally be split into sections for introduction, content, and contact information.
+
+***The <article> element specifies independent, self-contained content.
+
+An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site.
+
+Examples of where the <article> element can be used:
+
+    Forum posts
+    Blog posts
+    User comments
+    Product cards
+    Newspaper articles
+
+**** Can we use the definitions to decide how to nest those elements? No, we cannot!
+
+So, you will find HTML pages with <section> elements containing <article> elements, and <article> elements containing <section> elements.
+
+***The <nav> element defines a set of navigation links.
+**** Notice that NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major blocks of navigation links. 
+
+***The <aside> content should be indirectly related to the surrounding content.
+
+***The <figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+
+The <figcaption> tag defines a caption for a <figure> element. The <figcaption> element can be placed as the first or as the last child of a <figure> element.
+
+***The <main> tag specifies the main content of a document.
+The content inside the <main> element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms.
+Note: There must not be more than one <main> element in a document.
+The <main> element must NOT be a descendant of an <article>, <aside>, <footer>, <header>, or <nav> element.

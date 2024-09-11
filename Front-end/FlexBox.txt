@@ -1,0 +1,4 @@
+**.flex-container ==> always display: flex; ==> some properties of that: flex-direction, flex-wrap, flex-flow (shorthand of direction & wrap), justify-content, align-items, align-content
+**Perfect Centering==> Set both the ""justify-content"" and ""align-items"" properties to center, and the flex item will be perfectly centered:
+**.flex-item ==> sm properties: order(set inline class), flex-grow, flex-shrink, flex-basis, flex(shorthand for flex-grow, flex-shrink, flex-basis), align-self
+==> The ""align-self"" property overrides the default alignment set by the container's align-items property.
