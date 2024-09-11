@@ -2,6 +2,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --tophead1: #ffffff;
+    --title: #05325a;
+    --tophead2: #f2f2f2;
+    --titlelight: #ffffff;
+    --hovecoloe: #ff925c;
+    --activelink: #000000;
+    --tophead3:  #e2d1d1;
+    --mainbar1: #001f3b;
+    --mainbar2: #013562;
+    --toptext: #d3438b;
+}
+
 p {
     display: inline;
     font-size: 2vw;
@@ -25,28 +38,36 @@ header {
 
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 header,
 .top-bar,
 .main-bar {
     max-width: 100%;
-    background-color: red;
 }
 
 .top-bar {
-    background-color: blue;
-    color: aliceblue;
-    font-size: 2.5rem;
+    background-color: var(--tophead1);
+    color: var(--toptext);
+    font-size: 2rem;
 }
 
 .main-bar {
     background-color: purple;
     text-align: right;
+    font-size: 1.5rem;
+    color: var(--titlelight);
 }
 
 .nav-menu {
-    background-color: yellow;
+    background-color: var(--mainbar1);
     width: 100%;
 }
+
 /* basic nav mobile menu */
 /* .nav-menu a {
     color: black;
@@ -62,7 +83,7 @@ header,
 
     border-bottom: 1px solid black;
 }
-*/ 
+*/
 .item {
     display: inline-block;
     text-align: right;
@@ -74,11 +95,10 @@ header,
 }
 
 .head-title {
-    background-color: greenyellow;
+    background-color: var(--tophead2);
     float: left;
     width: 90%;
     text-align: center;
-    color: hotpink;
     max-height: 50%;
 }
 
@@ -88,6 +108,7 @@ header,
 
 .main-bar-button {
     display: none;
+    background-color: var(--mainbar2);
 }
 
 header h1 {
@@ -95,14 +116,15 @@ header h1 {
     font-size: 2vw;
 
 }
+
 /* nav menu */
 .nav-menu a:not(:first-child) {
     display: none;
 }
-.nav-menu.item a{
+
+.nav-menu.item a {
 
     text-decoration: none;
-    font-size: 1.5rem;
 }
 
 .nav-menu.item a.icon {
@@ -125,9 +147,26 @@ header h1 {
     float: none;
     display: block;
     text-align: center;
-    font-size: 1rem;
     text-decoration: none;
 }
+
+a:link {
+    color: var(--titlelight);
+}
+
+a:visited {
+    color: var(--titlelight);
+}
+
+a:hover {
+    color: var(--hovecoloe);
+}
+
+a:active {
+    color: var(--activelink);
+}
+
+
 /* ===================>>> For Responsive*/
 
 @media only screen and (min-width: 768px) {
@@ -143,46 +182,43 @@ header h1 {
     .top-bar,
     .main-bar {
         max-width: 100%;
-        background-color: red;
+
     }
 
     .top-bar {
         background-color: blue;
-        color: aliceblue;
         font-size: 2.5rem;
+        color: var(--toptext);
     }
 
     .main-bar {
         background-color: purple;
         text-align: right;
+        font-size: 1vw;
     }
 
     .nav-menu {
-        background-color: yellow;
         width: 70%;
         float: right;
     }
 
-   .nav-menu a {
-        color: black;
+    .nav-menu a {
+        
         padding: 2rem;
         display: inline;
         border: 0px;
-    }
-
-    .nav-menu.item a{
-
         text-decoration: none;
-        font-size: 0.8vw;
     }
-     /* 
+
+
+    /* 
     .nav-menu a:nth-last-child(1) {
         border-bottom: 0px;
     } */
 
     .main-bar-button {
         width: 30%;
-        background-color: aqua;
+        
 
     }
 
@@ -192,25 +228,23 @@ header h1 {
     }
 
     .logo {
-        background-color: violet;
+        background-color: var(--tophead3);
         width: 10%;
     }
 
     .head-title {
-        background-color: greenyellow;
+        background-color: var(--tophead1);
         float: right;
         width: 20%;
         text-align: center;
-        color: hotpink;
         max-height: 50%;
     }
 
     .head-search {
-        background-color: teal;
+        background-color: var(--tophead2);
         float: right;
         width: 70%;
         text-align: center;
-        color: hotpink;
         max-height: 50%;
     }
 
@@ -219,16 +253,36 @@ header h1 {
         font-size: 2vw;
 
     }
-   
-    .nav-menu a:not(:first-child){
+    a:link {
+        color: var(--titlelight);
+    }
+    
+    a:visited {
+        color: var(--titlelight);
+    }
+    
+    a:hover {
+        color: var(--hovecoloe);
+    }
+    
+    a:active {
+        color: var(--activelink);
+    }
+
+    .nav-menu a:not(:first-child) {
         display: inline;
     }
+
     .nav-menu.item a.icon {
         display: none;
 
     }
+    .nav-menu.item.responsive a {
+        display: inline;
+    }
+    
+    .nav-menu.item a.icon {
+
+        display: none;
+    }
 }
-
-
-
-
