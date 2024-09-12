@@ -8,8 +8,6 @@
     <meta name="keywords" content="">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/
-    font-awesome/4.7.0/css/font-awesome.min.css"> <!-- for icon of navigation mobile menu -->
     <link rel="stylesheet" href="style.css">
 
     <title>آنلاین شاپ</title>
@@ -44,7 +42,7 @@
                     <a href="#">درباره ما</a>
                     <a href="#">تماس با ما</a>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <span>مشاهده منو</span> 
+                        <span>مشاهده منو</span>
                     </a>
                 </nav>
             </div>
@@ -54,11 +52,11 @@
         </div>
 
         <div>
-            
+
         </div>
         <div class="flex-container">
             <div class="flex-item item-style-1">
-                <img src="img/s-pic1.jpg" alt="one"> 
+                <img src="img/s-pic1.jpg" alt="one">
             </div>
             <div class="flex-item item-style-2">
                 <img src="img/s-pic2.jpg" alt="two">
@@ -72,11 +70,15 @@
     </header>
     <main>
         <div class="flex-container">
+
             <div class="item-style-1">
-                <p>قبل</p>
+                <a href="javascript:void(0)" onclick="previous()">
+                    <p>قبل</p>
+                </a>
             </div>
+
             <!-- one produc -->
-            <section class="flex-item">
+            <section class="flex-item slider fade">
                 <header>
                     کیف چرم ایتالیایی
                 </header>
@@ -94,9 +96,9 @@
             </section>
 
             <!-- two produc -->
-            <section class="flex-item">
+            <section class="flex-item slider fade">
                 <header>
-                    کیف چرم ایتالیایی
+                    کیف چرم ایرانی
                 </header>
                 <div class="product-img">
                     <img src="img/product1.jpg" alt="product1">
@@ -111,9 +113,9 @@
 
             </section>
             <!-- three produc -->
-            <section class="flex-item">
+            <section class="flex-item slider fade">
                 <header>
-                    کیف چرم ایتالیایی
+                    کیف چرم سوئیسی
                 </header>
                 <div class="product-img">
                     <img src="img/product1.jpg" alt="product1">
@@ -129,9 +131,9 @@
             </section>
 
             <!-- four produc -->
-            <section class="flex-item">
+            <section class="flex-item slider fade">
                 <header>
-                    کیف چرم ایتالیایی
+                    کیف چرم ترکی
                 </header>
                 <div class="product-img">
                     <img src="img/product1.jpg" alt="product1">
@@ -147,7 +149,9 @@
             </section>
 
             <div class="item-style-1">
-                <p>بعد</p>
+                <a href="javascript:void(0)" onclick="next()">
+                    <p>بعد</p>
+                </a>
             </div>
         </div>
         <details>
@@ -155,7 +159,7 @@
             <p>چرم طبیعی دارای کیفیتی بسیار بالاتر از چرم مصنوعی میباشد</p>
         </details>
     </main>
-    
+
 
     <script>
         function myFunction() {
@@ -167,6 +171,80 @@
                 x.className = "nav-menu item";
             }
         }
+    </script>
+
+    <script>
+
+        /* var element = document.getElementById('one-product');
+        console.log(element);
+        style = window.getComputedStyle(element);
+        console.log(style);
+        displayvalue = style.getPropertyValue('display');
+        console.log(displayvalue);
+         */
+
+        /* let slideIndex = 0;
+        showSlides(slideIndex);
+        function changeslide(n) {
+            showSlides(slideIndex += n);
+        }
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("flex-item slider");
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+     */
+        let slideIndex = 0;
+        showSlides(slideIndex, "");
+        function next() {
+            showSlides(slideIndex += 1, "next");
+        }
+        function previous() {
+            showSlides(slideIndex -= 1, "previous");
+        }
+
+
+        function showSlides(n, y) {
+            let slides = document.getElementsByClassName("flex-item slider");
+            /* console.log(slides.length); */
+            if (n >= slides.length) {
+                slides[slideIndex - 1].style.display = "none";
+                slideIndex = 0
+                slides[slideIndex].style.display = "block";
+            }
+            if (n < 0) {
+                slides[slideIndex + 1].style.display = "none";
+                slideIndex = slides.length - 1
+                slides[slideIndex].style.display = "block";
+            }
+            if (y === "") {
+                slides[slideIndex].style.display = "block";
+                console.log("default");
+            } else {
+                if (y === "next" && slideIndex - 1 >= 0) {
+                    slides[slideIndex].style.display = "block";
+                    slides[slideIndex - 1].style.display = "none";
+                    console.log(slideIndex);
+                } else {
+                    if (y === "previous" && slideIndex + 1 < slides.length) {
+                        slides[slideIndex].style.display = "block";
+                        slides[slideIndex + 1].style.display = "none";
+                        console.log(slideIndex);
+                    }
+
+                }
+            }
+
+        }
+    </script>
+
+
+    <script>
+
     </script>
 </body>
 

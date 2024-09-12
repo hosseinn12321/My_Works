@@ -9,7 +9,7 @@
     --titlelight: #ffffff;
     --hovecoloe: #ff925c;
     --activelink: #000000;
-    --tophead3:  #e2d1d1;
+    --tophead3: #e2d1d1;
     --mainbar1: #001f3b;
     --mainbar2: #013562;
     --toptext: #d3438b;
@@ -17,7 +17,7 @@
 
 p {
     display: inline;
-    font-size: 2vw;
+    font-size: 1vw;
 }
 
 /*for testing*/
@@ -34,7 +34,7 @@ body {
 
 header {
     min-height: 5vw;
-    background-color: red;
+    /* background-color: red; */
 
 }
 
@@ -170,6 +170,7 @@ a:active {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .flex-item {
@@ -186,14 +187,14 @@ a:active {
     background-color: forestgreen;
     object-fit: cover;
     height: 20rem;
-    
+
 }
 
 .item-style-3 {
     background-color: saddlebrown;
     object-fit: cover;
     height: 20rem;
-    
+
 }
 
 .flex-item img {
@@ -211,6 +212,7 @@ main .flex-container {
     flex-wrap: nowrap;
     background-color: var(--tophead1);
     justify-content: center;
+    margin-top: 2rem;
 }
 
 main .flex-item {
@@ -220,6 +222,7 @@ main .flex-item {
     position: relative;
     margin: auto;
 }
+
 /* center vertically text */
 main .item-style-1 {
     width: 5%;
@@ -229,18 +232,21 @@ main .item-style-1 {
     text-align: center;
     font-size: 0.9rem;
 }
+
 main .item-style-1 p {
     line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
-  
+
 }
-/* center vertically text */
-.flex-item header{
+
+/* End up block */
+.flex-item header {
     background-color: var(--toptext);
     text-align: center;
     color: var(--titlelight);
 }
+
 .product-img {
     object-fit: contain;
     width: 90%;
@@ -248,6 +254,7 @@ main .item-style-1 p {
     background-color: #ff925c;
     margin: auto;
 }
+
 .product-img img {
     width: 100%;
     height: 100%;
@@ -258,17 +265,20 @@ main .item-style-1 p {
     text-align: center;
     font-size: 1.5rem;
 }
+
 .flex-item footer {
     background-color: var(--hovecoloe);
     position: absolute;
     bottom: 0px;
     width: 100%;
+    font-size: 1rem;
 }
 
 .item-box {
     display: inline-block;
     margin: 0 7px 0px 7px;
 }
+
 .right {
     float: right;
 }
@@ -278,14 +288,35 @@ main .item-style-1 p {
 }
 
 
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+  
+  @keyframes fade {
+    from {opacity: 0.8} 
+    to {opacity: 1}
+  }
+
+  section.flex-item:not(:first-of-type) {
+    display: none;
+}
+
+main p {
+    font-size: 2vw;
+}
 /* ===================>>> For Responsive*/
 
 @media only screen and (min-width: 768px) {
 
+  
+
+
     /*Header*/
     header {
         min-height: 5vw;
-        background-color: red;
+        /* background-color: red; */
 
     }
 
@@ -298,7 +329,7 @@ main .item-style-1 p {
 
     .top-bar {
         background-color: blue;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         color: var(--toptext);
     }
 
@@ -314,7 +345,7 @@ main .item-style-1 p {
     }
 
     .nav-menu a {
-        
+
         padding: 2rem;
         display: inline;
         border: 0px;
@@ -329,8 +360,6 @@ main .item-style-1 p {
 
     .main-bar-button {
         width: 30%;
-        
-
     }
 
     .item {
@@ -346,9 +375,9 @@ main .item-style-1 p {
     .head-title {
         background-color: var(--tophead1);
         float: right;
-        width: 23%;
+        width: 20%;
         text-align: center;
-        max-height: 50%;
+        max-height: 40%;
     }
 
     .head-search {
@@ -361,21 +390,22 @@ main .item-style-1 p {
 
     header h1 {
         display: inline;
-        font-size: 2vw;
+        font-size: 1vw;
 
     }
+
     a:link {
         color: var(--titlelight);
     }
-    
+
     a:visited {
         color: var(--titlelight);
     }
-    
+
     a:hover {
         color: var(--hovecoloe);
     }
-    
+
     a:active {
         color: var(--activelink);
     }
@@ -388,19 +418,22 @@ main .item-style-1 p {
         display: none;
 
     }
+
     .nav-menu.item.responsive a {
         display: inline;
     }
-    
+
     .nav-menu.item a.icon {
 
         display: none;
     }
+
     /* Header banner */
 
     .flex-item {
         width: 25%;
     }
+
     .item-style-2 {
         width: 50%;
     }
@@ -410,4 +443,15 @@ main .item-style-1 p {
     main .flex-item {
         width: 22%;
     }
+
+    .flex-item header {
+
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    section.flex-item:not(:first-of-type) {
+        display: block;
+    } 
+
 }
