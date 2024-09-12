@@ -90,7 +90,7 @@ header,
 }
 
 .logo {
-    background-color: violet;
+    background-color: var(--tophead3);
     width: 10%;
 }
 
@@ -166,6 +166,117 @@ a:active {
     color: var(--activelink);
 }
 
+/* Header Banner with 3 columns*/
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    width: 100%;
+}
+
+.item-style-1 {
+    background-color: #ff925c;
+    object-fit: cover;
+    height: 20rem;
+}
+
+.item-style-2 {
+    background-color: forestgreen;
+    object-fit: cover;
+    height: 20rem;
+    
+}
+
+.item-style-3 {
+    background-color: saddlebrown;
+    object-fit: cover;
+    height: 20rem;
+    
+}
+
+.flex-item img {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+/* Main  */
+
+
+main .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: var(--tophead1);
+    justify-content: center;
+}
+
+main .flex-item {
+    width: 90%;
+    background-color: var(--mainbar2);
+    height: 30rem;
+    position: relative;
+    margin: auto;
+}
+/* center vertically text */
+main .item-style-1 {
+    width: 5%;
+    background-color: cornflowerblue;
+    height: 30rem;
+    line-height: 30rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+main .item-style-1 p {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+  
+}
+/* center vertically text */
+.flex-item header{
+    background-color: var(--toptext);
+    text-align: center;
+    color: var(--titlelight);
+}
+.product-img {
+    object-fit: contain;
+    width: 90%;
+    height: 20rem;
+    background-color: #ff925c;
+    margin: auto;
+}
+.product-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.price-box {
+    background-color: var(--tophead3);
+    text-align: center;
+    font-size: 1.5rem;
+}
+.flex-item footer {
+    background-color: var(--hovecoloe);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.item-box {
+    display: inline-block;
+    margin: 0 7px 0px 7px;
+}
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
 
 /* ===================>>> For Responsive*/
 
@@ -235,7 +346,7 @@ a:active {
     .head-title {
         background-color: var(--tophead1);
         float: right;
-        width: 20%;
+        width: 23%;
         text-align: center;
         max-height: 50%;
     }
@@ -284,5 +395,19 @@ a:active {
     .nav-menu.item a.icon {
 
         display: none;
+    }
+    /* Header banner */
+
+    .flex-item {
+        width: 25%;
+    }
+    .item-style-2 {
+        width: 50%;
+    }
+
+    /* Main > Product */
+
+    main .flex-item {
+        width: 22%;
     }
 }
