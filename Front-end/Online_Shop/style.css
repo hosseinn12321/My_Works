@@ -26,7 +26,7 @@ p {
 }
 
 body {
-    background-color: rgb(124, 116, 163);
+    background-color: #7c74a3;
     margin: 0;
     width: 100%;
 }
@@ -268,7 +268,6 @@ a:active {
 main .flex-container {
     display: flex;
     flex-wrap: nowrap;
-    background-color: var(--tophead1);
     justify-content: center;
     margin-top: 2rem;
     width: 90%;
@@ -278,8 +277,8 @@ main .flex-container {
 
 main .flex-item {
     width: 90%;
-    background-color: var(--mainbar2);
     height: 30rem;
+    box-shadow: 1px 1px 10px 5px #ffffff;
     position: relative;
     margin: auto;
 }
@@ -287,18 +286,28 @@ main .flex-item {
 /* center vertically text */
 main .item-style-1 {
     width: 5%;
-    background-color: cornflowerblue;
     height: 30rem;
     line-height: 30rem;
-    text-align: center;
-    font-size: 0.9rem;
+
 }
 
 main .item-style-1 p {
     line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
+    color: var(--activelink);
+    padding: 4px;
+    font-size: 3vw;
+    background-color: #dfd6dc;
+    text-align: center;
+}
 
+#next {
+    margin-left: 2vw;
+}
+
+#previous {
+    margin-right: 3vw;
 }
 
 /* End up block */
@@ -322,13 +331,15 @@ main .item-style-1 p {
 }
 
 .price-box {
-    background-color: var(--tophead3);
+    box-shadow: 1px 1px 10px 5px #ffffff;
+    background-color:  #bab6d2;
     text-align: center;
     font-size: 1.5rem;
 }
 
 .flex-item footer {
-    background-color: var(--hovecoloe);
+    box-shadow: 1px 1px 10px 5px #ff9d47;
+    background-color:  #ffeab6;
     position: absolute;
     bottom: 0px;
     width: 100%;
