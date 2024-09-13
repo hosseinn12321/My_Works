@@ -12,7 +12,7 @@
     --tophead3: #e2d1d1;
     --mainbar1: #001f3b;
     --mainbar2: #013562;
-    --toptext: #d3438b;
+    --toptext: #c8409f;
 }
 
 p {
@@ -26,7 +26,7 @@ p {
 }
 
 body {
-    background-color: bisque;
+    background-color: rgb(124, 116, 163);
     margin: 0;
     width: 100%;
 }
@@ -36,6 +36,11 @@ header {
     min-height: 5vw;
     /* background-color: red; */
 
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 5vw;
 }
 
 .clearfix::after {
@@ -53,20 +58,18 @@ header,
 .top-bar {
     background-color: var(--tophead1);
     color: var(--toptext);
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .main-bar {
-    background-color: purple;
-    text-align: right;
-    font-size: 1.5rem;
     color: var(--titlelight);
+    font-size: 1rem;
 }
 
 .nav-menu {
     background-color: var(--mainbar1);
     width: 100%;
-}
+}   
 
 /* basic nav mobile menu */
 /* .nav-menu a {
@@ -86,20 +89,23 @@ header,
 */
 .item {
     display: inline-block;
-    text-align: right;
+    text-align: right;      /* Text align for all item in header */
 }
 
 .logo {
     background-color: var(--tophead3);
-    width: 10%;
+    width: 20%;
+    object-fit: contain;
+    max-height: 0rem;
+    float: right;
 }
 
 .head-title {
     background-color: var(--tophead2);
     float: left;
-    width: 90%;
+    width: 80%;
     text-align: center;
-    max-height: 50%;
+   
 }
 
 .head-search {
@@ -111,45 +117,78 @@ header,
     background-color: var(--mainbar2);
 }
 
-header h1 {
-    display: inline;
-    font-size: 2vw;
 
-}
 
 /* nav menu */
-.nav-menu a:not(:first-child) {
+/* .nav-menu a:not(:first-child) {
+    display: none;
+} */
+.nav-menu a {
     display: none;
 }
-
-.nav-menu.item a {
+.nav-menu.item #index-menu a {
 
     text-decoration: none;
+    float: right;
 }
 
-.nav-menu.item a.icon {
+.nav-menu.item #category a {
 
-    display: block;
+    text-decoration: none;
     float: left;
 }
 
-.nav-menu.item.responsive {
+
+.nav-menu.item a.icon {
+    display: block;
+}
+
+.nav-menu.item.responsive #index-menu {
     position: relative;
 }
 
-.nav-menu.item.responsive .icon {
+.nav-menu.item.responsive #index-menu .icon {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.nav-menu.item.responsive a {
+.nav-menu.item.responsive #index-menu a {
     float: none;
     display: block;
     text-align: center;
     text-decoration: none;
 }
+/* responsive category */
 
+.nav-menu.item.responsive #category {
+    position: relative;
+}
+
+.nav-menu.item.responsive #category .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.nav-menu.item.responsive #category a {
+    float: none;
+    display: block;
+    text-align: right;
+    margin: 5px 10vw 5px 0px;
+    text-decoration: none;
+}
+
+.nav-menu.item.responsive #category .dropdown a.subcat {
+    display: block;
+    margin-right: 20vw;
+}
+
+
+
+
+
+/* end */
 a:link {
     color: var(--titlelight);
 }
@@ -170,11 +209,12 @@ a:active {
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 1vw;
 }
 
 .flex-item {
-    width: 100%;
+    width: 90%;
+    margin: auto;
 }
 
 .item-style-1 {
@@ -213,6 +253,9 @@ main .flex-container {
     background-color: var(--tophead1);
     justify-content: center;
     margin-top: 2rem;
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
 }
 
 main .flex-item {
