@@ -19,6 +19,13 @@ p {
     display: inline;
     font-size: 1vw;
 }
+.boxshadow {
+    box-shadow: 1vw 1vw 10vw 1vw white;
+}
+img#open-icon, img#catg-icon {
+    filter: invert();
+    display: inline;
+}
 
 /*for testing*/
 .test {
@@ -66,6 +73,7 @@ header,
     font-size: 1rem;
     position: sticky;
     top: 0;
+    z-index: 10;
     
 }
 
@@ -145,6 +153,7 @@ header,
 
 .nav-menu.item a.icon {
     display: block;
+    width: 40%;
 }
 
 .nav-menu.item.responsive #index-menu {
@@ -223,14 +232,14 @@ a:active {
 }
 
 /* Header Banner with 3 columns*/
-.flex-container {
+.flex-container.banner {
     display: flex;
     flex-wrap: wrap;
     margin-top: 1vw;
 }
 
 .flex-item {
-    width: 90%;
+    width: 80%;
     margin: auto;
     padding-bottom: 3vw;
 }
@@ -238,13 +247,13 @@ a:active {
 .item-style-1 {
     
     object-fit: cover;
-    height: 20rem;
+    height: 30rem;
 }
 
 .item-style-2 {
     
     object-fit: cover;
-    height: 20rem;
+    height: 15rem;
 
 }
 
@@ -255,14 +264,28 @@ a:active {
 
 }
 
-.flex-item img {
+.banner .flex-item img {
 
     width: 100%;
     height: 100%;
-
+    box-shadow: -2vw 4vw 12vw 3vw wheat;
+    position: relative;
 }
 
 /* Main  */
+
+section.flex-item:not(:first-of-type) {
+    display: none;
+}
+
+
+div.title-section {
+    display: block;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 3rem;
+}
 
 
 main .flex-container {
@@ -273,6 +296,7 @@ main .flex-container {
     width: 90%;
     margin: auto;
     margin-top: 1rem;
+
 }
 
 main .flex-item {
@@ -283,15 +307,19 @@ main .flex-item {
     margin: auto;
 }
 
+
+section.slider > header{
+    background-color: var(--mainbar1);
+}
 /* center vertically text */
-main .item-style-1 {
+main .arrow {
     width: 5%;
     height: 30rem;
     line-height: 30rem;
 
 }
 
-main .item-style-1 p {
+/* main .arrow {
     line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
@@ -300,7 +328,7 @@ main .item-style-1 p {
     font-size: 3vw;
     background-color: #dfd6dc;
     text-align: center;
-}
+} */
 
 #next {
     margin-left: 2vw;
@@ -320,7 +348,7 @@ main .item-style-1 p {
 .product-img {
     object-fit: contain;
     width: 90%;
-    height: 20rem;
+    height: 75%;
     background-color: #ff925c;
     margin: auto;
 }
@@ -338,7 +366,6 @@ main .item-style-1 p {
 }
 
 .flex-item footer {
-    box-shadow: 1px 1px 10px 5px #ff9d47;
     background-color:  #ffeab6;
     position: absolute;
     bottom: 0px;
@@ -371,10 +398,7 @@ main .item-style-1 p {
     to {opacity: 1}
   }
 
-  section.flex-item:not(:first-of-type) {
-    display: none;
-}
-
+ 
 main p {
     font-size: 2vw;
 }
@@ -522,7 +546,8 @@ main p {
         line-height: 3rem;
     }
 
-    section.flex-item:not(:first-of-type) {
+    section.flex-item.slider:nth-of-type(2),  
+        section.flex-item.slider:nth-of-type(3) {
         display: block;
     } 
 
