@@ -124,7 +124,7 @@ function showSlides(y) {
             }
 
         }
-    } else {
+    } else {        /* it's for more than or equal 768 screen size */
         
         if (y === "next") {
             slides[slideIndex - 1].style.display = "none";

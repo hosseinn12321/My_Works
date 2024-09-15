@@ -47,7 +47,7 @@ header {
 
 header h1 {
     display: inline-block;
-    font-size: 5vw;
+    font-size: 3vw;
 }
 
 .clearfix::after {
@@ -101,27 +101,30 @@ header,
 */
 .item {
     display: inline-block;
-    text-align: right;      /* Text align for all item in header */
+    text-align: center;      /* Text align for all item in header */
 }
 
 .logo {
-    background-color: var(--tophead3);
+   
     width: 20%;
-    object-fit: contain;
-    max-height: 0rem;
-    float: right;
+
 }
 
+
 .head-title {
-    background-color: var(--tophead2);
-    float: left;
-    width: 80%;
-    text-align: center;
+   
+    width: 30%;
+    text-align: center;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+    
+    float: right;
    
 }
 
 .head-search {
-    display: none;
+   
+    text-align: center;
+    width: 50%;
+    float: right;
 }
 
 .main-bar-button {
