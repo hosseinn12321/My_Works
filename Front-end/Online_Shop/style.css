@@ -63,10 +63,25 @@ header,
 }
 
 .top-bar {
-    background-color: var(--tophead1);
     color: var(--toptext);
     font-size: 1.5rem;
+    box-shadow: 1vw 1vw 10vw 1vw rgb(128, 123, 187);
+    position: relative;
 }
+
+.bgimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/topbar.jpg');
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;
+    filter: blur(2px);
+    z-index: -1;
+    filter: opacity(0.7);
+}
+
 
 .main-bar {
     color: var(--titlelight);
@@ -83,50 +98,52 @@ header,
    
 }   
 
-/* basic nav mobile menu */
-/* .nav-menu a {
-    color: black;
-    padding: 0.5rem;
-    display: block;
-    text-align: center;
-    border: 1px solid black;
-    border-bottom: 0px;
-
-}      
-
-.nav-menu a:nth-last-child(1) {
-
-    border-bottom: 1px solid black;
-}
-*/
 .item {
     display: inline-block;
-    text-align: center;      /* Text align for all item in header */
+    text-align: right;      /* Text align for all item in header */
 }
 
 .logo {
    
     width: 20%;
-
+    margin: 3vw 0 0 0;
+    text-align: right;
 }
 
 
 .head-title {
-   
-    width: 30%;
-    text-align: center;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
-    
-    float: right;
-   
+    width: 20%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
+    float: left;
+    margin: 5vw 3vw 0vw 2vw;
+    text-align: left;
+    max-height: 1rem;
+}
+
+.head-title img {
+    filter:opacity(0.8);
 }
 
 .head-search {
-   
-    text-align: center;
     width: 50%;
-    float: right;
+    float: left;
+    margin: 3vw 3vw 0vw 0vw;
+}
+.head-search img {
+    margin: 0;
 }
 
+.head-search input[type="search"]{
+    margin-top: 10px;
+    width: 90%;
+    box-shadow: 1px 1px 3px 1px;
+    border: 0;
+    background-color: #ffeab6;
+    height: 1.5rem;
+    border-radius: 2vw;
+}
+.head-search input[type="search"]:focus {
+    background-color: #f2f2f2;
+}
 .main-bar-button {
     display: none;
     background-color: var(--mainbar2);
@@ -397,13 +414,106 @@ main .arrow {
   }
   
   @keyframes fade {
-    from {opacity: 0.8} 
-    to {opacity: 1}
+    from {filter: blur(4px);} 
+    to {filter: blur(0);}
   }
 
  
 main p {
     font-size: 2vw;
+}
+
+/* Our services */
+.our-services {
+    width: 80%;
+    margin: auto;
+}
+
+details {
+    text-align: right;
+    direction: rtl;
+    color: var(--activelink);
+    height: 5rem;
+    
+}
+details p {
+    font-size: 1rem;
+
+}
+summary {
+    background-color: #bab6d2;
+    color: #000000;
+    font-size: 1.5rem;
+    border: 2px solid wheat;
+    border-collapse: collapse;
+    margin-top: 1vw;
+    border-radius: 10vw;
+
+
+}
+
+/* smooth close and open animation */
+.content-details {
+    height: 100%;
+    overflow: hidden;
+}
+
+details.description[open] {
+    height: 10rem;
+}
+
+.content-details {
+    font-size: 2vw;
+    margin-top: 15vw;
+    opacity: 1;
+    
+}
+
+/* additional transiton for p in details */
+details.description[open] .content-details {
+    opacity: 1;
+    margin-top: 0vw;
+    color: black;
+}
+
+
+
+
+
+
+/* chagable details text open or close */
+details.description summary::after {
+    content: attr(data-open);
+    font-size: 1rem;
+    margin-right: 10vw;
+  }
+  
+  details.description:not([open]) summary::after {
+    content: attr(data-close);
+    font-size: 1;
+    margin-right: 5vw;
+  }
+
+/* add transiton two above section about details */
+
+  details.description,
+  details.description[open] .content-details {
+      transition: all .9s ease-in-out;
+      transform-origin: center bottom;
+  }
+ 
+details.description summary::after {
+  display: inline-block;
+  transition: all .9s ease-in-out;
+  transform-origin: center bottom;
+}
+  
+
+footer {
+    width: 100%;
+    background-color: var(--titlelight);
+    max-height: 5rem;
+    margin-top: 3rem;
 }
 /* ===================>>> For Responsive*/
 
