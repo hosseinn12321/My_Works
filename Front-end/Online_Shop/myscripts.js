@@ -157,7 +157,16 @@ function showSlides(y) {
     }
 
 }
+/* Open just one details at the moment */
+function details() {
+    var x = document.getElementsByClassName("description");
+
+    for (i = 0; i < x.length; i++) {
+        var open = x[i].hasAttribute('open');
+         if (open !== "true") {
+            x[i].removeAttribute('open');
+         } 
+    }
+}
 
 
-/* 
- */

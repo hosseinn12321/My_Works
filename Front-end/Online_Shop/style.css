@@ -3,16 +3,17 @@
 }
 
 :root {
-    --tophead1: #ffffff;
-    --title: #05325a;
-    --tophead2: #f2f2f2;
-    --titlelight: #ffffff;
-    --hovecoloe: #ff925c;
-    --activelink: #000000;
-    --tophead3: #e2d1d1;
-    --mainbar1: #001f3b;
-    --mainbar2: #013562;
-    --toptext: #c8409f;
+    --color-white: #ffffff;
+    --color-hovecoloe: #ff7e3e;
+    --color-black: #000000;
+    --color-b-dark: #f5deb3;
+    --color-c-dark: #001f3b;
+    --color-c-medium: #013562;
+    --color-text1: #ff90de;
+    --color-a-light: #c9c4e4;
+    --color-a-medium: #746eaf;
+    --color-a-dark: #40397a;
+    --radius: 3rem;
 }
 
 p {
@@ -20,7 +21,7 @@ p {
     font-size: 1vw;
 }
 .boxshadow {
-    box-shadow: 1vw 1vw 10vw 1vw white;
+    box-shadow: 1vw 1vw 10vw 1vw var(--color-c-medium);
 }
 img#open-icon, img#catg-icon {
     filter: invert();
@@ -33,7 +34,7 @@ img#open-icon, img#catg-icon {
 }
 
 body {
-    background-color: #7c74a3;
+    background-color: var(--color-a-light);
     margin: 0;
     width: 100%;
 }
@@ -63,9 +64,9 @@ header,
 }
 
 .top-bar {
-    color: var(--toptext);
+    color: var(--color-text1);
     font-size: 1.5rem;
-    box-shadow: 1vw 1vw 10vw 1vw rgb(128, 123, 187);
+    box-shadow: 1vw 1vw 10vw 1vw var(--color-a-dark);
     position: relative;
 }
 
@@ -137,16 +138,16 @@ header,
     width: 90%;
     box-shadow: 1px 1px 3px 1px;
     border: 0;
-    background-color: #ffeab6;
+    background-color: var(--color-b-dark);
     height: 1.5rem;
     border-radius: 2vw;
 }
 .head-search input[type="search"]:focus {
-    background-color: #f2f2f2;
+    background-color: var(--color-white);
 }
 .main-bar-button {
     display: none;
-    background-color: var(--mainbar2);
+    background-color: red   
 }
 
 
@@ -219,9 +220,10 @@ header,
 .dropdown-content {
     padding: 0px;
     margin: 0px;
+
 }
 .dropdown-content a {
-    box-shadow: 1px 1px white;
+    box-shadow: 2px 1px var(--color-a-dark);
     padding-right: 2vw;
     font-size: 1rem;
 }
@@ -244,11 +246,11 @@ a:visited {
 }
 
 a:hover {
-    color: var(--hovecoloe);
+    color: var(--color-hovecoloe);
 }
 
 a:active {
-    color: var(--activelink);
+    color: var(--color-black);
 }
 
 /* Header Banner with 3 columns*/
@@ -288,7 +290,7 @@ a:active {
 
     width: 100%;
     height: 100%;
-    box-shadow: -2vw 4vw 12vw 3vw wheat;
+    box-shadow: -2vw 4vw 7vw 1vw var(--color-b-dark);
     position: relative;
 }
 
@@ -322,14 +324,16 @@ main .flex-container {
 main .flex-item {
     width: 90%;
     height: 30rem;
-    box-shadow: 1px 1px 10px 5px #ffffff;
+    box-shadow: 1px 1px 10px 5px var(--color-a-light);
+    border-radius: var(--radius);
     position: relative;
     margin: auto;
 }
 
 
 section.slider > header{
-    background-color: var(--mainbar1);
+    background-color: var(--color-a-dark);
+    border-radius: var(--radius);
 }
 /* center vertically text */
 main .arrow {
@@ -339,11 +343,23 @@ main .arrow {
 
 }
 
+main .arrow a {
+
+    border-radius: var(--radius);
+
+}
+
+main .arrow a > img {
+    width: 90%;
+    height: auto;
+    filter: invert();
+}
+
 /* main .arrow {
     line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
-    color: var(--activelink);
+    color: var(--color-black);
     padding: 4px;
     font-size: 3vw;
     background-color: #dfd6dc;
@@ -360,17 +376,18 @@ main .arrow {
 
 /* End up block */
 .flex-item header {
-    background-color: var(--toptext);
     text-align: center;
-    color: var(--titlelight);
+    color: var(--color-white);
+    width: 70%;
+    margin: 2vw auto;
 }
 
 .product-img {
     object-fit: contain;
     width: 90%;
     height: 75%;
-    background-color: #ff925c;
-    margin: auto;
+    margin:  auto;
+    box-shadow: -2vw 0vw 3vw var(--color-white);
 }
 
 .product-img img {
@@ -379,18 +396,26 @@ main .arrow {
 }
 
 .price-box {
-    box-shadow: 1px 1px 10px 5px #ffffff;
-    background-color:  #bab6d2;
+    box-shadow: 1px 1px 10px 5px var(--color-hovecoloe);
+    background-color: var(--color-c-dark);
+    color: white;
+    border-radius: var(--radius);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .flex-item footer {
-    background-color:  #ffeab6;
+    background-color:  var(--color-hovecoloe);
     position: absolute;
     bottom: 0px;
     width: 100%;
     font-size: 1rem;
+    border-radius:var(--radius);
+
+}
+
+.flex-item footer a {
+    color: var(--color-black);
 }
 
 .item-box {
@@ -432,7 +457,7 @@ main p {
 details {
     text-align: right;
     direction: rtl;
-    color: var(--activelink);
+    color: var(--color-black);
     height: 5rem;
     
 }
@@ -441,13 +466,14 @@ details p {
 
 }
 summary {
-    background-color: #bab6d2;
-    color: #000000;
+    background-color: var(--color-a-medium);
+    color: var(--color-text1);
     font-size: 1.5rem;
-    border: 2px solid wheat;
+    border: 2px solid var(--color-b-dark);
     border-collapse: collapse;
     margin-top: 1vw;
     border-radius: 10vw;
+    list-style-type: "";
 
 
 }
@@ -473,11 +499,12 @@ details.description[open] {
 details.description[open] .content-details {
     opacity: 1;
     margin-top: 0vw;
-    color: black;
 }
 
-
-
+/* Change color summer when detail opens */
+details.description[open] summary {
+    background-color: var(--color-b-dark);
+  }
 
 
 
@@ -539,7 +566,7 @@ footer {
     .top-bar {
         background-color: blue;
         font-size: 1.5rem;
-        color: var(--toptext);
+        color: var(--color-text1);
     }
 
     .main-bar {
@@ -612,11 +639,11 @@ footer {
     }
 
     a:hover {
-        color: var(--hovecoloe);
+        color: var(--color-hovecoloe);
     }
 
     a:active {
-        color: var(--activelink);
+        color: var(--color-black);
     }
 
     .nav-menu a:not(:first-child) {

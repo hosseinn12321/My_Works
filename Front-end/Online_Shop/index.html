@@ -133,7 +133,7 @@
                 <div class="arrow" id="previous">
                     <a href="javascript:void(0)" onclick="previous()">
                         <img src="icons/arrow.png" alt="قبلی"
-                            style="width: 90%;height: auto;transform: rotate(180deg);filter: invert();">
+                            style="transform: rotate(180deg);">
                     </a>
                 </div>
                 <!-- one produc -->
@@ -148,8 +148,8 @@
                         قیمت 200 هزار تومان
                     </div>
                     <footer>
-                        <div class="item-box right"> افزودن به سبد خرید</div>
-                        <div class="item-box left"> مشاهده محصول</div>
+                        <a href="#"> <div class="item-box right"> افزودن به سبد خرید </div> </a>
+                        <a href="#"> <div class="item-box left"> مشاهده محصول</div> </a>
                     </footer>
 
                 </section>
@@ -166,8 +166,8 @@
                         قیمت 200 هزار تومان
                     </div>
                     <footer>
-                        <div class="item-box right"> افزودن به سبد خرید</div>
-                        <div class="item-box left"> مشاهده محصول</div>
+                        <a href="#"> <div class="item-box right"> افزودن به سبد خرید </div> </a>
+                        <a href="#"> <div class="item-box left"> مشاهده محصول</div> </a>
                     </footer>
 
                 </section>
@@ -183,8 +183,8 @@
                         قیمت 200 هزار تومان
                     </div>
                     <footer>
-                        <div class="item-box right"> افزودن به سبد خرید</div>
-                        <div class="item-box left"> مشاهده محصول</div>
+                        <a href="#"> <div class="item-box right"> افزودن به سبد خرید </div> </a>
+                        <a href="#"> <div class="item-box left"> مشاهده محصول</div> </a>
                     </footer>
 
                 </section>
@@ -201,20 +201,20 @@
                         قیمت 200 هزار تومان
                     </div>
                     <footer>
-                        <div class="item-box right"> افزودن به سبد خرید</div>
-                        <div class="item-box left"> مشاهده محصول</div>
+                        <a href="#"> <div class="item-box right"> افزودن به سبد خرید </div> </a>
+                        <a href="#"> <div class="item-box left"> مشاهده محصول</div> </a>
                     </footer>
 
                 </section>
 
                 <div class="arrow" id="next" style="order: 110;">
-                    <a href="javascript:void(0)" onclick="next()">
-                        <img src="icons/arrow.png" alt="بعدی" style="width: 90%;height: auto;filter: invert();">
+                    <a href="javascript:void(0)"  onclick="next()">
+                        <img src="icons/arrow.png" alt="بعدی">
                     </a>
                 </div>
             </div>
         </div>
-        <div class="our-services">
+        <div class="our-services" onclick="details()">
             <details class="description" open>
                 <summary data-open="-" data-close="+">چرا چرم طبیعی</summary>
                 <div class="content-details">
@@ -222,6 +222,16 @@
                         با کیفیت از ما خرید کنید
                     </p>
                 </div>
+            </details>
+
+            <details class="description">
+                <summary data-open="-" data-close="+">گارانتی محصولات ما</summary>
+                <div class="content-details">
+                    <p>چرم طبیعی دارای کیفیتی بسیار بالاتر از چرم مصنوعی میباشد.
+                        با کیفیت از ما خرید کنید
+                    </p>
+                </div>
+
             </details>
 
             <details class="description">
