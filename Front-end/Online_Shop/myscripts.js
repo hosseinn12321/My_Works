@@ -67,13 +67,14 @@ function getwidth() {
     width = window.outerWidth;
     let slides = document.getElementsByClassName("flex-item slider");
     if (width >= 768) {
-        for (i = 0; i < slides.length - 1; i++) {
+        for (let i = 0; i < slides.length - 1; i++) {
             slides[i].style.display = "block";
         }
         slideIndex = 0;
         countOfSlide = 3;
     } else {
-        for (i = 1; i < slides.length; i++) {
+        slides[0].style.display = "block";
+        for (let i = 1; i < slides.length; i++) {
             slides[i].style.display = "none";
 
         }
@@ -159,10 +160,10 @@ function showSlides(y) {
 }
 /* Open just one details at the moment */
 function details() {
-    var x = document.getElementsByClassName("description");
+    let x = document.getElementsByClassName("description");
 
     for (i = 0; i < x.length; i++) {
-        var open = x[i].hasAttribute('open');
+        let open = x[i].hasAttribute('open');
          if (open !== "true") {
             x[i].removeAttribute('open');
          } 
