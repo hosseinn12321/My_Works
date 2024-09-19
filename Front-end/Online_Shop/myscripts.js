@@ -15,6 +15,21 @@ function indexmenu() {
         another.setAttribute("style", "display:block;")
     }
 }
+/* <a> click effect */
+document.onmousedown = function(event) {
+    let target = event.target; // where was the click?
+    console.log(target);
+    if (target['localName'] == 'a') {
+        target.classList.toggle('backchange');
+    }
+  }
+  document.onmouseup = function(event) {
+    let target = event.target; // where was the click?
+    console.log(target);
+    if (target['localName'] == 'a') {
+        target.classList.toggle('backchange');
+    }
+}
 
 /* When Click On CAtegory Icon */
 
@@ -48,6 +63,12 @@ function showNoShow(item) {
             sublist[i].classList.remove('show');
         }
     }
+}
+
+/* mouseover and up on menu */
+let icon;
+function menueffect(icon) {
+    document.getElementById(icon).classList.toggle("opacity");
 }
 
 

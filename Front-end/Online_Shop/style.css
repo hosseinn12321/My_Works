@@ -4,7 +4,7 @@
 
 :root {
     --color-white: #ffffff;
-    --color-hovecoloe: #ff7e3e;
+    --color-hovecoloe: #ffc8ac;
     --color-black: #000000;
     --color-b-dark: #f5deb3;
     --color-c-dark: #001f3b;
@@ -31,7 +31,16 @@ img#open-icon, img#catg-icon {
     filter: invert();
     display: inline;
 }
+/* mouseover and mouseup */
+.opacity {
+    opacity: 0.5;
+}
 
+.backchange {
+    background-color: var(--color-white);
+    box-shadow: 2vw 2vw 10vw 1vw var(--color-black);
+    opacity: 0.5;
+}
 /*for testing*/
 .test {
     background-color: brown;
