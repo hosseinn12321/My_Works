@@ -1,3 +1,4 @@
+/* When Click On MainMenu's Icon */
 function indexmenu() {
     var x = document.getElementById("myTopnav");
     var icon = document.getElementById("open-icon");
@@ -15,7 +16,7 @@ function indexmenu() {
     }
 }
 
-/*  */
+/* When Click On CAtegory Icon */
 
 
 function category() {
@@ -34,29 +35,24 @@ function category() {
     }
 }
 
-/*  */
 
-
-/* var element = document.getElementById('one-product');
-       style = window.getComputedStyle(element);
-       displayvalue = style.getPropertyValue('display');
-        */
-
-/* let slideIndex = 0;
-showSlides(slideIndex);
-function changeslide(id) {
-    showSlides(slideIndex += id);
-}
-function showSlides(id) {
-    let slides = document.getElementsByClassName("flex-item slider");
-    if (id >= slides.length) { slideIndex = 0 }
-    if (id < 0) { slideIndex = slides.length - 1}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+/* DoropDown SubMenu */
+let item;
+function showNoShow(item) {
+    document.getElementById(item).classList.toggle("show");
+    /* Close Other submenu */
+    let sublist = document.getElementsByClassName('dropdown-content');
+    for (let i = 0; i < sublist.length; i++) {
+        x = sublist[i].classList.contains('show');
+        if (x && sublist[i].attributes['id']['value'] != item) {
+            sublist[i].classList.remove('show');
+        }
     }
-    slides[slideIndex].style.display = "block";
 }
-*/
+
+
+/* Close the dropdown if user click outside of it */
+
 
 
 /* for correct show count items of slider to diffrent view */
@@ -84,7 +80,7 @@ function getwidth() {
 }
 
 
-/* for mobie viwe of button slider */
+/* for button slider */
 let slideIndex = 0;
 function next() {
     slideIndex += 1

@@ -55,20 +55,21 @@
 
                 <!-- category list -->
 
-                <nav id="category" onclick="nav();">
-                    <div class="dropdown">
+                <nav id="category">
+                    <div class="dropdown" onclick="showNoShow('submenu1')">
                         <a href="#">
-                            مردانه
-                            <div class="dropdown-content">
+                              مردانه 
+                            <div id="submenu1" class="dropdown-content">
                                 <a href="#">کت و شلوار</a>
                                 <a href="#">پیراهن</a>
                             </div>
                         </a>
                     </div>
-                    <div class="dropdown">
+
+                    <div class="dropdown" onclick="showNoShow('submenu2')">
                         <a href="#">
                             زنانه
-                            <div class="dropdown-content">
+                            <div id="submenu2" class="dropdown-content">
                                 <a href="#">شومیز</a>
                                 <a href="#">مانتو</a>
                             </div>
