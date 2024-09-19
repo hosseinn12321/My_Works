@@ -9,6 +9,7 @@
     --color-b-dark: #ffc457;
     --color-c-dark: #001f3b;
     --color-c-medium: #013562;
+    --color-c-light: #2973b4;
     --color-text1: #a83184;
     --color-text2: #2e202a;
     --color-a-light: #c9c4e4;
@@ -741,11 +742,23 @@ div.copyright p {
     }
 
     /* nav menu */
-
+    /* sub menu */
     .dropdown-content {
-        padding-top: 2vw;
+        position: absolute;
+        padding-top: 4vw;
+        overflow: hidden;
+
     }
 
+    .dropdown-content a {
+        display: block;
+        width: 100%;
+        float: none;
+        background-color: var(--color-text1);
+        margin: auto;
+        padding: 0.5vw;
+        text-align: center;
+    }
 
     a:link {
         color: var(--titlelight);
