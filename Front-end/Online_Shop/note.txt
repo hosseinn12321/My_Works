@@ -1,1 +1,1 @@
-1. Add width effect to search bar when focused
+1. Add width effect to search bar when focused.
