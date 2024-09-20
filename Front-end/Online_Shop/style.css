@@ -15,6 +15,7 @@
     --color-a-light: #c9c4e4;
     --color-a-medium: #746eaf;
     --color-a-dark: #40397a;
+    --color-d-light: #e0ddff;
     --radius: 3rem;
     --border-a: 0.8vw solid var(--color-a-medium);
     --font-size-m-medium: 1.2rem;
@@ -22,6 +23,7 @@
     --font-size-m-small: 0.8rem;
     --font-size-d-small: 0.8vw;
     --font-size-d-large: 1.5vw;
+    --shadow-a: 0.5vw 0.5vw 1vw 0vw var(--color-black);
 
 }
 header h3 {display: none;}
@@ -114,6 +116,7 @@ header,
     top: 0;
     z-index: 10;
     background-color: var(--color-a-medium);
+    box-shadow: var(--shadow-a);
 
 }
 
@@ -137,23 +140,22 @@ header,
 }
 
 
-.head-title {
+.head-tools {
     width: 20%;
-    ;
     float: left;
     margin: 5vw 3vw 0vw 2vw;
     text-align: left;
     max-height: 1rem;
 }
 
-.head-title img {
+.head-tools img {
     filter: opacity(0.8);
 }
 
 .head-search {
     width: 50%;
     float: left;
-    margin: 3vw 3vw 0vw 0vw;
+    margin: 4vw 3vw 0vw 0vw;
 }
 
 .head-search img {
@@ -241,6 +243,8 @@ header,
 /*   .nav-menu.item #category .dropdown-content {
     display: none;
 } */
+
+
 .dropdown-content {
     display: none;
 }
@@ -335,12 +339,13 @@ section.flex-item:not(:first-of-type) {
 }
 
 
-div.title-section {
+main div.product-section {
     display: block;
     clear: both;
     width: 100%;
     text-align: center;
     padding-bottom: 3rem;
+    min-height: 3rem;
 }
 
 
@@ -365,7 +370,7 @@ main .flex-item {
 }
 
 
-section.slider>header {
+section.slider > header {
     background-color: var(--color-a-dark);
     border-radius: var(--radius);
 }
@@ -389,17 +394,6 @@ main .arrow a>img {
     height: auto;
     /* filter: invert(); */
 }
-
-/* main .arrow {
-    line-height: 1.5;
-    display: inline-block;
-    vertical-align: middle;
-    color: var(--color-black);
-    padding: 4px;
-    font-size: 3vw;
-    background-color: #dfd6dc;
-    text-align: center;
-} */
 
 #next {
     margin-left: 2vw;
@@ -660,13 +654,13 @@ div.copyright p {
 
 /* ===================>>> For Responsive For Deskrop*/
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 960px) {
 
 
 
     /*Header*/
     header {
-        min-height: 5vw;
+        min-height: 6vw;
         /* background-color: red; */
 
     }
@@ -680,16 +674,16 @@ div.copyright p {
     }
 
     .top-bar {
-        background-color: var(--color-a-dark);
+        background-color: var(--color-white);
         font-size: var(--font-size-d-small);
         color: var(--color-text1);
-        min-height: 5rem;
+        min-height: 3rem;
     }
 
     .main-bar {
-        background-color: purple;
+        background-color: var(--color-a-light);
         text-align: right;
-        min-height: 1vw;
+        min-height: 3vw;
         font-size: var(--font-size-d-small);
     }
 
@@ -712,28 +706,32 @@ div.copyright p {
     }
 
     .logo {
-        background-color: var(--tophead3);
+        /* background-color: var(--tophead3); */
         width: 10%;
-        float: left;
+        float: right;
         margin: 0;
     }
 
-    .head-title {
-        background-color: var(--color-hovecoloe);
-        float: right;
-        width: 20%;
+    .head-tools {
+        /* background-color: var(--color-hovecoloe); */
+        float: left;
+        width: 7%;
         text-align: center;
         min-height: 2vw;
         margin: auto;
+        margin-top: 0.5vw;
+        margin-right: 1vw;
     }
 
     .head-search {
-        background-color: var(--color-b-dark);
-        float: right;
+        /* background-color: var(--color-b-dark); */
+        float: left;
         width: 20%;
         text-align: center;
-        min-height: 2vw;
+        min-height: 1vw;
         margin: auto;
+        margin-top: 0.2vw;
+        margin-left: 1vw;
     }
 
     header h1 {
@@ -743,21 +741,32 @@ div.copyright p {
 
     /* nav menu */
     /* sub menu */
+
+   
+    .back-g-drop-content {
+        position: absolute;
+        background-color: #2973b4;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        filter: opacity(0.6) blur(2px);
+        display: block;
+        z-index: -1;
+    }
     .dropdown-content {
         position: absolute;
         padding-top: 4vw;
         overflow: hidden;
-
     }
-
     .dropdown-content a {
         display: block;
         width: 100%;
         float: none;
-        background-color: var(--color-text1);
         margin: auto;
-        padding: 0.5vw;
-        text-align: center;
+        padding: 0.5vw 2vw;
+        text-align: right;
+        box-shadow: none;
+        font-size: var(--font-size-d-small);
     }
 
     a:link {
@@ -806,6 +815,15 @@ div.copyright p {
 
     /* Main > Product */
 
+    main div.product-section {
+        display: block;
+        clear: both;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 3rem;
+        min-height: 40rem;
+    }
+    
     main .flex-item {
         width: 22%;
     }
@@ -820,7 +838,11 @@ div.copyright p {
     section.flex-item.slider:nth-of-type(3) {
         display: block;
     }
-
+    /* Our services */
+    .our-services {
+        margin-top: 2rem;
+    }
+    /* Main Footer */
     footer.main-footer {
         width: 100%;
         border: 0.3vw solid var(--color-hovecoloe);

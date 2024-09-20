@@ -18,17 +18,17 @@
 
 <body>
     <header>
-            <h3 style="text-align: center;"> 
-                First Mobile view Design
-                <br>developing percentage:
-                Mobile: 60%
-                Desktop:30%
-            </h3>
+        <h3 style="text-align: center;">
+            First Mobile view Design
+            <br>developing percentage:
+            Mobile: 60%
+            Desktop:30%
+        </h3>
 
         <div class="top-bar clearfix">
             <div class="bgimg"> </div>
 
-            <div class="head-title item">
+            <div class="head-tools item">
                 <img src="icons/shopping-bag.png" style="width:2rem;height:2rem;" alt="">
                 <img src="icons/user.png" style="width:2rem;height:2rem;" alt="">
             </div>
@@ -39,7 +39,11 @@
             </div>
 
             <div class="logo item">
-                <img src="img/Logo.png" alt="Logo" style="width:50%;height:50%;">
+                <picture>
+                    <source srcset="img/Logo-wide.png" media="(min-width: 768px)">
+                    <source srcset="img/Logo.png">
+                    <img src="img/Logo.png" alt="Logo" style="width:50%;height:50%;">
+                </picture>
             </div>
 
         </div>
@@ -66,19 +70,23 @@
                     <div class="dropdown" onclick="showNoShow('submenu1')">
                         <a href="#">
                             مردانه
-                            <div id="submenu1" class="dropdown-content">
-                                <a href="#">کت و شلوار</a>
-                                <a href="#">پیراهن</a>
-                            </div>
+                            
+                                <div id="submenu1" class="dropdown-content">
+                                    <div class="back-g-drop-content"> </div>
+                                    <a href="#">کت و شلوار</a>
+                                    <a href="#">پیراهن</a>
+                                </div>
                         </a>
                     </div>
 
                     <div class="dropdown" onclick="showNoShow('submenu2')">
                         <a href="#">
                             زنانه
-                            <div id="submenu2" class="dropdown-content">
-                                <a href="#">شومیز</a>
-                                <a href="#">مانتو</a>
+                            
+                                <div id="submenu2" class="dropdown-content">
+                                    <div class="back-g-drop-content"></div>
+                                    <a href="#">شومیز</a>
+                                    <a href="#">مانتو</a>
                             </div>
                         </a>
                     </div>
@@ -133,7 +141,7 @@
 
     </header>
     <main>
-        <div class="title-section boxshadow">
+        <div class="product-section boxshadow">
             <h2>جدیدترین محصولات</h2>
             <div class="flex-container">
                 <div class="arrow" id="previous">
