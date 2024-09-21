@@ -16,6 +16,7 @@
     --color-a-medium: #746eaf;
     --color-a-dark: #40397a;
     --color-d-light: #e0ddff;
+    --color-d-medium: #afafaf;
     --radius: 3rem;
     --border-a: 0.8vw solid var(--color-a-medium);
     --font-size-m-medium: 1.2rem;
@@ -26,7 +27,11 @@
     --shadow-a: 0.5vw 0.5vw 1vw 0vw var(--color-black);
 
 }
-header h3 {display: none;}
+
+header h3 {
+    display: none;
+}
+
 p {
     display: inline;
     font-size: 1vw;
@@ -175,7 +180,9 @@ header,
     background-color: var(--color-white);
 }
 
-
+.head-cattitle {
+    display: none;
+}
 
 /* nav menu */
 
@@ -255,7 +262,7 @@ header,
 }
 
 .dropdown-content a {
-    box-shadow: 2px 1px var(--color-a-dark);
+    box-shadow: 1px 1px var(--color-a-dark);
     padding-right: 2vw;
     font-size: var(--font-size-m-medium);
 }
@@ -623,11 +630,13 @@ footer.main-footer .flex-container .flex-item p {
     float: left;
 
 }
+
 div.copyright {
     width: 100%;
     margin-top: 1vw;
     text-align: center;
 }
+
 div.copyright p {
     font-size: var(--font-size-m-small);
 }
@@ -653,8 +662,10 @@ div.copyright p {
 
 
     /*Header*/
-  
-    header h3 {display: block;}
+
+    header h3 {
+        display: block;
+    }
 
     header,
     .top-bar,
@@ -668,6 +679,26 @@ div.copyright p {
         font-size: var(--font-size-d-small);
         color: var(--color-text1);
         min-height: 3rem;
+    }
+
+    /* For Category Icon on Top bar */
+    .head-cattitle {
+        float: right;
+        margin-right: 25%;
+        text-align: center;
+        margin-top: 0.5vw;
+        color: var(--color-a-dark);
+        background-color: var(--color-a-light);
+        border-radius: var(--radius);
+        padding: 0vw 2vw;
+    }
+
+    .head-cattitle:hover {
+        background-color: var(--color-text1);
+    }
+
+    .head-cattitle a {
+        text-decoration: none;
     }
 
     .main-bar {
@@ -738,14 +769,19 @@ div.copyright p {
         right: 0;
         top: 0;
         width: 15%;
-        border: 0.3vw solid var(--color-a-dark);
+        border: 0.1vw solid var(--color-black);
         border-top: none;
         border-right: none;
         display: none;
+        color: var(--color-text1);
     }
+    .show {
+        display: block !important;
+    }
+    /* Background color of side bar (CAtegories) */
     .back-g-drop-content {
         position: absolute;
-        background-color: var(--color-d-light);
+        background-color: var(--color-d-medium);
         background-size: cover;
         width: 100%;
         height: 100%;
@@ -758,21 +794,26 @@ div.copyright p {
         margin: 0vw;
         width: 100%;
         float: right;
+        margin-right: 0.3vw;
+        overflow: hidden;
     }
 
-    .dropdown > a {
+    .dropdown>a {
         text-align: right;
         width: 100%;
-        
     }
+
     .dropdown-content {
-        overflow: hidden;
+        overflow: hidden; /* text shadow collaps */
         float: left;
     }
+
     .dropdown-content a {
         width: 100%;
         padding-top: 0vw;
+        padding-right: 0vw;
         font-size: var(--font-size-d-small);
+        box-shadow: none;
     }
 
     a:link {
@@ -836,18 +877,18 @@ div.copyright p {
         padding-bottom: 3rem;
         min-height: 40rem;
     }
-    
+
     main .flex-item {
         width: 22%;
     }
 
-   /*  .flex-item header {
+    /*  .flex-item header {
 
         height: 3rem;
         line-height: 3rem;
     } */
 
-    .flex-item > header {
+    .flex-item>header {
         text-align: center;
         color: var(--color-white);
         width: 100%;
@@ -862,10 +903,12 @@ div.copyright p {
     section.flex-item.slider:nth-of-type(3) {
         display: block;
     }
+
     /* Our services */
     .our-services {
         margin-top: 2rem;
     }
+
     /* Main Footer */
     footer.main-footer {
         width: 100%;
@@ -884,7 +927,7 @@ div.copyright p {
         margin: 1vw;
     }
 
-    footer.main-footer .head-fo > h2 {
+    footer.main-footer .head-fo>h2 {
         text-align: center;
         float: none;
         margin: 1vw;
@@ -893,10 +936,10 @@ div.copyright p {
     footer.main-footer .flex-container .flex-item h4 {
         float: none;
     }
-    
+
     footer.main-footer .flex-container .flex-item p {
         float: none;
-    
+
     }
 
 
@@ -914,14 +957,16 @@ div.copyright p {
         margin-bottom: 0vw;
         border: 1px solid var(--color-c-medium);
     }
+
     div.copyright {
         width: 100%;
         margin-top: 1vw;
         text-align: center;
     }
+
     div.copyright p {
         font-size: var(--font-size-d-small);
         text-align: center;
-        
+
     }
 }

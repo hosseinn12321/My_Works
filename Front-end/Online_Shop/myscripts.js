@@ -16,20 +16,20 @@ function indexmenu() {
 /* <a> click effect */
 document.onmousedown = function(event) {
     let target = event.target; // where was the click?
-    console.log(target);
     if (target['localName'] == 'a') {
         target.classList.toggle('backchange');
     }
   }
   document.onmouseup = function(event) {
     let target = event.target; // where was the click?
-    console.log(target);
+     /* console.log(target);  */
     if (target['localName'] == 'a') {
         target.classList.toggle('backchange');
     }
 
     
 }
+
 
 /* When Click On CAtegory Icon */
 
@@ -71,10 +71,25 @@ function menueffect(icon) {
     document.getElementById(icon).classList.toggle("opacity");
 }
 
+/* show category on dektop view */
 
-/* Close the dropdown if user click outside of it */
+function showcatd() {
+    document.getElementById("category").classList.toggle("show");
+    console.log( document.getElementById("category"));
+}
+/* Close the category if user click outside of it */
 
-
+document.onclick = function (getpossition) {
+    let categorySide = document.getElementById("category");
+    if (categorySide["attributes"]["class"]["textContent"] == "show") { /* if nav side bar is show */
+        let target = getpossition.target;
+        console.log(target);
+        if (target["children"][0]["className"] !== "dropdown-content" || target["children"].length == 0) {  /* if click another section */
+            console.log("sss");
+            document.getElementById("category").classList.remove("show");
+        }
+    }
+}
 
 /* for correct show count items of slider to diffrent view */
 window.addEventListener("resize", getwidth);
@@ -178,5 +193,6 @@ function details() {
          } 
     }
 }
+
 
 
