@@ -781,22 +781,26 @@ div.copyright p {
     }
 
     
-  /*   .tools-contain::after {
+    .tools-contain::after {
         content: "";
         clear: both;
         display: table;
-    } */
+    }
     .tools-content {
         position: absolute;
         min-width: 15rem;
-        background-color: rgb(107, 240, 138);
+        background-color: var(--color-c-medium);
         min-height: 10rem;
         z-index: 11; /* one more than main bar */
-        margin: 1vw 2vw;
+        margin: 0vw 1vw;
         display: none;
     }
     .tools-contain:hover .tools-content {
         display: block;
+    }
+
+    .tools-contain:hover #shopping {
+        filter: opacity(0.4);
     }
     /* Every product column in tools shop */
     .shop-box-item {
@@ -829,8 +833,13 @@ div.copyright p {
 
     #total-price {
         margin-top: 1vw;
-        background-color: chocolate;
+        background-color: var(--color-d-medium);
         direction: rtl;
+    }
+
+    #keep-shoping a {
+        color: var(--color-b-dark);
+        text-decoration: none;
     }
     /* nav menu */
     /* sub menu */
