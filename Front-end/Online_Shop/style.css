@@ -683,7 +683,9 @@ div.copyright p {
         max-width: 100%;
 
     }
-
+    .bgimg {
+       display: none;
+    }
     .top-bar {
         background-color: var(--color-white);
         font-size: var(--font-size-d-small);
