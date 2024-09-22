@@ -71,11 +71,12 @@ function menueffect(icon) {
     document.getElementById(icon).classList.toggle("opacity");
 }
 
-/* show category on dektop view */
+/* show category Side Bar on dektop view */
 
 function showcatd() {
     document.getElementById("category").classList.toggle("show");
-    console.log( document.getElementById("category"));
+    console.log(document.getElementById("category"))
+    document.getElementsByTagName("body")[0].classList.toggle("blur"); /* blur outside of sidebar */
 }
 /* Close the category if user click outside of it */
 
@@ -87,6 +88,7 @@ document.onclick = function (getpossition) {
         if (target["children"][0]["className"] !== "dropdown-content" || target["children"].length == 0) {  /* if click another section */
             console.log("sss");
             document.getElementById("category").classList.remove("show");
+            document.getElementsByTagName("body")[0].classList.remove("blur"); /* end bluring */
         }
     }
 }

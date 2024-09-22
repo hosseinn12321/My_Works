@@ -16,7 +16,7 @@
     --color-a-medium: #746eaf;
     --color-a-dark: #40397a;
     --color-d-light: #e0ddff;
-    --color-d-medium: #afafaf;
+    --color-d-medium: #d5d5d5;
     --radius: 3rem;
     --border-a: 0.8vw solid var(--color-a-medium);
     --font-size-m-medium: 1.2rem;
@@ -67,7 +67,6 @@ body {
     margin: 0;
     width: 100%;
 }
-
 
 header {
     min-height: 5vw;
@@ -659,7 +658,10 @@ div.copyright p {
 
 @media only screen and (min-width: 960px) {
 
-
+    body.blur > *:not(header), body.blur div.top-bar, body.blur .banner {
+        filter: blur(2px);
+    }
+    
 
     /*Header*/
 
@@ -774,10 +776,26 @@ div.copyright p {
         border-right: none;
         display: none;
         color: var(--color-text1);
+        filter: blur(0) !important;
+    }
+
+     #category::before {   /* Head of side Bar */
+        content: "دسته بندی"; 
+        margin: 1vw 2vw;
+        font-size: large;
+        background-color: var(--color-d-light);
+        display: block;
+        margin: 0px;
+        text-align: center;
     }
     .show {
         display: block !important;
+        
     }
+
+    /* .blur {
+        filter: blur(3px);
+    } */
     /* Background color of side bar (CAtegories) */
     .back-g-drop-content {
         position: absolute;
