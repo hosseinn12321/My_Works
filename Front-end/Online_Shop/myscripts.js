@@ -55,7 +55,7 @@ function category() {
 let item;
 function showNoShow(item) {
     document.getElementById(item).classList.toggle("show");
-    /* Close Other submenu */
+    /* Close Other submenu items */
     let sublist = document.getElementsByClassName('dropdown-content');
     for (let i = 0; i < sublist.length; i++) {
         x = sublist[i].classList.contains('show');
@@ -82,7 +82,8 @@ function showcatd() {
 
 document.onclick = function (getpossition) {
     let categorySide = document.getElementById("category");
-    if (categorySide["attributes"]["class"]["textContent"] == "show") { /* if nav side bar is show */
+    console.log(categorySide["attributes"]["class"]["textContent"]);
+    if (categorySide["attributes"]["class"]["textContent"].includes("show")) { /* if nav side bar is show */
         let target = getpossition.target;
         console.log(target);
         if (target["children"][0]["className"] !== "dropdown-content" || target["children"].length == 0) {  /* if click another section */

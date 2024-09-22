@@ -853,9 +853,11 @@ div.copyright p {
         border: 0.1vw solid var(--color-black);
         border-top: none;
         border-right: none;
-        display: none;
+        display: block;
         color: var(--color-text1);
         filter: blur(0) !important;
+        right: -20vw;
+        transition: all 1s ease-out;
     }
 
      #category::before {   /* Head of side Bar */
@@ -867,9 +869,9 @@ div.copyright p {
         margin: 0px;
         text-align: center;
     }
-    .show {
-        display: block !important;
-        
+    .show {   /* Show  SideBar*/
+        transition: all .5s ease-out;
+        right: 0vw !important;
     }
 
     /* .blur {
@@ -1065,5 +1067,21 @@ div.copyright p {
         font-size: var(--font-size-d-small);
         text-align: center;
 
+    }
+
+    /* transition */
+    .slowMove {
+        animation-name: slowMove;
+        animation-duration: 1s;
+    }
+    
+    @keyframes slowMove {
+        from {
+            margin: 10vw;
+        }
+    
+        to {
+            margin: 0;
+        }
     }
 }
