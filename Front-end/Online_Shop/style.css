@@ -24,6 +24,7 @@
     --font-size-m-small: 0.8rem;
     --font-size-d-small: 0.8vw;
     --font-size-d-large: 1.5vw;
+    --font-size-d-vsmal: 0.7vw;
     --shadow-a: 0.5vw 0.5vw 1vw 0vw var(--color-black);
 
 }
@@ -35,6 +36,7 @@ header h3 {
 p {
     display: inline;
     font-size: 1vw;
+    direction: rtl; 
 }
 
 .boxshadow {
@@ -151,6 +153,12 @@ header,
     max-height: 1rem;
 }
 
+.tools-content {display: none;}
+
+.head-tools > div {
+    display: inline-block;
+    margin: 0 2vw;
+}
 .head-tools img {
     filter: opacity(0.8);
 }
@@ -738,12 +746,17 @@ div.copyright p {
     .head-tools {
         /* background-color: var(--color-hovecoloe); */
         float: left;
-        width: 7%;
+        width: 10%;
         text-align: center;
         min-height: 2vw;
         margin: auto;
         margin-top: 0.5vw;
         margin-right: 1vw;
+    }
+    /* divs palced together (inline) */
+    .head-tools > div {
+        display: inline-block;
+        margin: 0 2vw;
     }
 
     .head-search {
@@ -761,7 +774,64 @@ div.copyright p {
         display: inline;
         font-size: var(--font-size-d-large);
     }
+    /* tools > Shopping */
+    .tools-contain {
+        position: relative;
+        width: 1vw;
+    }
 
+    
+  /*   .tools-contain::after {
+        content: "";
+        clear: both;
+        display: table;
+    } */
+    .tools-content {
+        position: absolute;
+        min-width: 15rem;
+        background-color: rgb(107, 240, 138);
+        min-height: 10rem;
+        z-index: 11; /* one more than main bar */
+        margin: 1vw 2vw;
+        display: none;
+    }
+    .tools-contain:hover .tools-content {
+        display: block;
+    }
+    /* Every product column in tools shop */
+    .shop-box-item {
+        width: 90%;
+        margin: auto;
+        margin-top: 0.5vw;
+        background-color: var(--color-d-light);
+        min-height: 3vw;
+        overflow: auto; /* fit a image in box */
+    }
+
+    .product-info {
+        float: right;
+    }
+    .product-info > p {
+        margin: 0vw 0.5vw;
+    }
+    .product-count {
+        margin-left: 1vw;
+    }
+    .product-price {
+        background-color: var(--color-a-light);
+        width: 100%;
+        clear: both;
+        direction: rtl;
+    }
+    .tools-content p {
+        font-size: var(--font-size-d-vsmal);
+    }
+
+    #total-price {
+        margin-top: 1vw;
+        background-color: chocolate;
+        direction: rtl;
+    }
     /* nav menu */
     /* sub menu */
 
