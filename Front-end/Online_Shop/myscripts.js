@@ -13,8 +13,8 @@ function indexmenu() {
         another.setAttribute("style", "display:block;")
     }
 }
-/* <a> click effect */
-document.onmousedown = function(event) {
+
+/* document.onmousedown = function(event) {
     let target = event.target; // where was the click?
     if (target['localName'] == 'a') {
         target.classList.toggle('backchange');
@@ -22,14 +22,14 @@ document.onmousedown = function(event) {
   }
   document.onmouseup = function(event) {
     let target = event.target; // where was the click?
-     /* console.log(target);  */
+     
     if (target['localName'] == 'a') {
         target.classList.toggle('backchange');
     }
 
     
 }
-
+ */
 
 /* When Click On CAtegory Icon */
 
@@ -96,16 +96,30 @@ document.onclick = function (getpossition) {
 
 /* for correct show count items of slider to diffrent view */
 window.addEventListener("resize", getwidth);
+window.addEventListener("load", getwidth);
+var showCount = 0;
 var width = 0;
 function getwidth() {
     width = window.outerWidth;
     let slides = document.getElementsByClassName("flex-item slider");
-    if (width >= 768) {
+    if (width >= 960) {
+        console.log('Desktop');
+        showCount = 1;
         for (let i = 0; i < slides.length - 1; i++) {
             slides[i].style.display = "block";
         }
+        slides[slides.length - 1].style.display = "none";
         slideIndex = 0;
-    } else {
+    } if (width < 960 && width >= 600) {
+        showCount = 2;
+        console.log('Tablet');
+        for (let i = 0; i < slides.length - 2; i++) {
+            slides[i].style.display = "block";
+        }
+        for (let i = slides.length -2; i < slides.length; i++) {slides[i].style.display = "none"}
+        slideIndex = 0;
+    } if (width < 600) {
+        console.log('Mobile');
         slides[0].style.display = "block";
         for (let i = 1; i < slides.length; i++) {
             slides[i].style.display = "none";
@@ -132,7 +146,7 @@ function showSlides(y) {
     let slides = document.getElementsByClassName("flex-item slider");
     width = window.outerWidth;
     /* Check screen size for type of next and previous behavior */
-    if (width < "768") {
+    if (width < 600) {
         if (slideIndex >= slides.length) {
             slides[slideIndex - 1].style.display = "none";
             slideIndex = 0
@@ -162,7 +176,7 @@ function showSlides(y) {
             slides[slideIndex - 1].style.display = "none";
             if (slideIndex >= slides.length) {slideIndex = 0}
             var z = slideIndex;
-            for (i = 0; i < 3; i++) {
+            for (i = 0; i < slides.length - showCount; i++) {
                 slides[z].setAttribute("style", "order:" + (i + 2) + ";");
                 slides[z].style.display = "block";
                 z += 1;
@@ -173,7 +187,7 @@ function showSlides(y) {
             slides[slideIndex + 1].style.display = "none";
             if (slideIndex < 0) {slideIndex = slides.length - 1}
             var z = slideIndex;
-            for (i = 3; i > 0; i--) {
+            for (i = slides.length - showCount; i > 0; i--) {
                 slides[z].setAttribute("style", "order:" + (i + 2) + ";");
                 slides[z].style.display = "block";
                 z -= 1;

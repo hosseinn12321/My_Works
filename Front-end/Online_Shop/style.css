@@ -659,6 +659,11 @@ div.copyright p {
         font-size: 1.5rem;
         color: var(--color-text1);
     }
+    main .flex-item {
+        width: 40%;
+    }
+    .price-box {font-size: var(--font-size-d-smal);}
+    .flex-item footer {font-size: var(--font-size-d-smal);}
 
 }
 
@@ -980,16 +985,14 @@ div.copyright p {
     }
 
     main .flex-item {
-        width: 22%;
+        width: 20%;
     }
 
-    /*  .flex-item header {
 
-        height: 3rem;
-        line-height: 3rem;
-    } */
-
-    .flex-item>header {
+    main .flex-item {
+        min-height: auto;
+    }
+    .flex-item > header {
         text-align: center;
         color: var(--color-white);
         width: 100%;
@@ -998,11 +1001,14 @@ div.copyright p {
         border-radius: var(--radius);
         min-height: 2vw;
     }
-
-    /* Because Show 3 item when page load on Desktop */
-    section.flex-item.slider:nth-of-type(2),
-    section.flex-item.slider:nth-of-type(3) {
-        display: block;
+    .price-box {font-size: var(--font-size-d-vsmal);}
+    .flex-item footer {font-size: var(--font-size-d-vsmal);}
+   
+    main .arrow {
+        width: 3%;
+        min-height: 30rem;
+        line-height: 30rem;
+    
     }
 
     /* Our services */

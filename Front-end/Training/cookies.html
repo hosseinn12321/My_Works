@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="setCookie('khone', 'mhd', 2)">Set Cookie</button>
+    <button onclick="getCookie('khone')">get cookie</button>
+    <button onclick="checkCookie()">Check User Status</button>
+    <p id="result"></p>
+
+
+    <script>
+        document.cookie = "usernameee=John Smith; expires=Tue, 24 Sep 2024 12:00:00 UTC; path=/";
+        function setCookie(name, value, exp) {
+            const myd = new Date();
+            myd.setTime(myd.getTime() + (exp * 24 * 60 * 60 * 1000));
+            expires = "expires=" + myd.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + " ;path=/";
+            document.getElementById("result").innerHTML = document.cookie;
+        }
+
+        function getCookie(name) {
+            let myCookie = decodeURIComponent(document.cookie);
+            console.log(myCookie);
+            let splitCookie = myCookie.split(';');
+            console.log(splitCookie);
+            for (let i = 0; i < splitCookie.length; i++) {
+                let x = splitCookie[i];
+                while (x.charAt(0) == ' ') {
+                    x = x.substring(1);  /* delete white space at start point of string if there is */
+                }
+                if (x.indexOf(name) == 0 && x.substring(name.length, name.length + 1) == '=') {
+                   return x.substring(name.length + 1, x.length); /* name.length + 1 because for skip '=' sign */
+                }
+            } 
+            return ""
+        }
+
+        /* Check if user have entered name say welcome else get her/his name */
+        function checkCookie() {
+            let userStatus = getCookie('username');
+            console.log(userStatus);
+            if (userStatus != "") {
+                alert("Welcome" + userStatus);
+            } else {
+                userStatus = prompt("Please enter your name:", "");
+                if (userStatus != "" && userStatus != null) {
+                    setCookie('username', userStatus, 2);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
