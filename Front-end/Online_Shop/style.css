@@ -655,15 +655,20 @@ div.copyright p {
 @media only screen and (min-width: 600px) {
 
     .top-bar {
-        background-color: rgb(0, 255, 51);
+        background-color: var(--color-d-medium);
         font-size: 1.5rem;
         color: var(--color-text1);
     }
     main .flex-item {
         width: 40%;
     }
-    .price-box {font-size: var(--font-size-d-smal);}
-    .flex-item footer {font-size: var(--font-size-d-smal);}
+    /* Main Slider */
+    .price-box {font-size: var(--font-size-m-small);}
+    .flex-item footer {font-size: var(--font-size-m-small);}
+
+    main .flex-item {
+        min-height: auto;
+    }
 
 }
 
