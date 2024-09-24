@@ -104,14 +104,14 @@ function getwidth() {
     let slides = document.getElementsByClassName("flex-item slider");
     if (width >= 960) {
         console.log('Desktop');
-        showCount = 1;
+        showCount = 1; /* it's determines how many product should show at same time */
         for (let i = 0; i < slides.length - 1; i++) {
             slides[i].style.display = "block";
         }
         slides[slides.length - 1].style.display = "none";
         slideIndex = 0;
     } if (width < 960 && width >= 600) {
-        showCount = 2;
+        showCount = 2; /* it's determines how many product should show at same time */
         console.log('Tablet');
         for (let i = 0; i < slides.length - 2; i++) {
             slides[i].style.display = "block";
