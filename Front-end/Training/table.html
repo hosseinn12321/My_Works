@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            direction: rtl;
+        }
+
+        div.tb {
+            min-width: 20rem;
+            border: 0.6vw solid brown;
+            padding: 1vw 2vw;
+            overflow: auto;
+           
+        }
+
+        table {
+            border-collapse: collapse;
+            direction: rtl;
+            margin: auto;
+            width: 50%;
+            /* border: 3px solid navy; */
+        }
+
+        td,th {
+            border-bottom: 0.2vw solid black;
+            text-align: center;
+        }
+
+        th {
+            background-color: aquamarine;
+            border-right: 1px solid black;
+        }
+        tr {min-height: 2rem;}
+        tr:hover {background-color: olivedrab;}
+        th, td {min-width: 5rem; /* responsive in smaller screens should use to max-width if use min-width we should use overflow at parent */}
+
+        tr:nth-child(even) {background-color: beige;}
+
+        tr td:nth-child(1) {background-color: navajowhite;}
+    </style>
+</head>
+
+<body>
+    <div class="tb">
+        <table>
+            <tr>
+                <th>ردیف</th>
+                <th>نام</th>
+                <th>نام خانوادگی</th>
+                <th> کد کارمندی</th>
+                <th>میزان ساعت کارکرد</th>
+                <th>میزان حقوق دریافتی ماهانه</th>
+                <th>میزان دریافتی اضافه کاری</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>رضا</td>
+                <td>تیموری</td>
+                <td>9283</td>
+                <td>270</td>
+                <td>9میلیون</td>
+                <td>900هزارتومان</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>هانیه</td>
+                <td>مومنی</td>
+                <td>9243</td>
+                <td>240</td>
+                <td>9میلیون</td>
+                <td>0 ریال</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>سارا</td>
+                <td>همتی</td>
+                <td>2345</td>
+                <td>240</td>
+                <td>9میلیون</td>
+                <td>0 ریال</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

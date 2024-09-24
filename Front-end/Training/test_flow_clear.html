@@ -19,11 +19,11 @@
         }
         pre {
             clear: right;
-            display: inline-block; /* display block it's default and takes whole of width */
+            display: inline-block; /* display block: it's default and takes whole of width */
             border: 1px solid green;
         }
         .myimg2 {
-            float: right;
+            clear: left;
             border: 1px solid yellow;
         }
     </style>
@@ -31,7 +31,7 @@
 <body>
     <div class="container clearfix">
         <div class="box1">
-            <img class="myimg" src="img/Pizza_pic.jpg" style="width:50%;height:50%"/>
+            <img class="myimg" src="../Online_Shop/img/banner1.jpg" style="width:50%;height:50%"/>
             <pre>Visual Studio Code is a lightweight but powerful 
                 source code editor which runs on your desktop and is available 
                 for Windows, macOS and Linux. It comes with built-in support for 
@@ -40,7 +40,7 @@
                 . Begin your journey with VS Code with these introductory videos.
 
             </pre>
-            <img src="img/pizza_pic2.jpg" class="myimg2" style="width:50%;height:50%" />
+            <img src="../Online_Shop/img/banner2.jpg" class="myimg2" style="width:50%;height:50%" />
         </div>
     </div>
 </body>

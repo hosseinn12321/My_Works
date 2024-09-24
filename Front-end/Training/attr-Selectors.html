@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p[class = "top"] {background-color: aqua;}
+        p[class ~= "top"] {background-color: red;}
+        p[class |= "top"] {background-color: bisque;}
+        p[class ^= "top"] {background-color: yellowgreen;}
+        p[class $= "top"] {background-color: blueviolet;}
+        p[class *= "to"] {background-color: seagreen;}
+    </style>
+</head>
+<body>
+    <p class="top">a</p>
+    <p class="top hello">b</p>
+    <p class="bye top">c</p>
+    <p class="hi-top">z</p>
+    <p class="top-hello">v</p>
+    <p class="tophello">m</p>
+    <p class="tos">k</p>
+    <p class="mto">o</p>
+    <p class="mtoe">ww</p>
+</body>
+</html>
