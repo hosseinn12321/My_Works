@@ -1,1 +1,1 @@
-1. Add width effect to search bar when focused.
+*** It's have been implementing with vanilla js and css
