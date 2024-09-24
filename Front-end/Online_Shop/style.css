@@ -170,18 +170,25 @@ header,
 }
 
 .head-search img {
-    margin: 0;
+    float: left;
+    margin: 15px;
 }
 
 .head-search input[type="search"] {
     margin-top: 10px;
-    width: 90%;
+    width: 50%;
     box-shadow: 1px 1px 3px 1px;
     border: 0;
     background-color: var(--color-b-dark);
     height: 1.5rem;
     border-radius: 2vw;
+    float: left;
+    transition: width .6s ease-in-out;
 }
+.head-search input[type="search"]:focus {
+    width: 80%;
+}
+
 
 .head-search input[type="search"]:focus {
     background-color: var(--color-white);
