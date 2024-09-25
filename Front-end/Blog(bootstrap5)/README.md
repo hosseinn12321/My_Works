@@ -1,1 +1,0 @@
-# **It has been implemented with bootstrap5 instead of vanilla css **
